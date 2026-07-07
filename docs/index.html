@@ -1,42 +1,217 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-<title>Wetboek Multiverse Roleplay</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wetboek Multiverse Roleplay</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 
 <body>
 
+
 <header>
-<h1>📖 Wetboek van Strafrecht</h1>
-<p>Multiverse Roleplay</p>
+
+    <div class="topbar">
+
+        <img src="afbeeldingen/Rijksoverheid.png" 
+        class="rijksoverheid-logo">
+
+        <div class="titel">
+
+            <h1>Wetboek van Strafrecht</h1>
+            <p>Multiverse Roleplay</p>
+
+        </div>
+
+
+        <img src="afbeeldingen/Politie Multiverse.png"
+        class="politie-logo">
+
+    </div>
+
+
 </header>
+
+
+
+
+<section class="hero">
+
+
+    <img src="afbeeldingen/Politie Multiverse.png"
+    class="hero-logo">
+
+
+    <h2>Welkom bij het officiële Wetboek</h2>
+
+
+    <p>
+        Raadpleeg alle wetten, artikelen en strafbepalingen
+        van Multiverse Roleplay.
+    </p>
+
+
+
+    <input 
+    type="text"
+    id="zoek"
+    placeholder="🔍 Zoek op wet, artikel of onderwerp..."
+    onkeyup="zoeken()">
+
+
+
+</section>
+
+
+
 
 
 <div class="container">
 
-<a href="wetboek/algemeen.html">
-    <strong>🏛️ Algemene bepalingen</strong>
+
+
+<a class="kaart" href="wetboek/algemeen.html">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h3>Algemene bepalingen</h3>
+
+<p>
+Basisregels en algemene voorwaarden binnen het wetboek.
+</p>
+
 </a>
 
-<a href="wetboek/strafrecht.html">
-    <strong>⚖️ Wetboek van Strafrecht</strong>
+
+
+
+
+<a class="kaart" href="wetboek/strafrecht.html">
+
+<i class="fa-solid fa-gavel"></i>
+
+<h3>Wetboek van Strafrecht</h3>
+
+<p>
+Alle misdrijven, overtredingen en straffen.
+</p>
+
 </a>
 
-<a href="wetboek/verkeer.html">
-    <strong>🚗 (WVW) Wegenverkeerswet</strong>
+
+
+
+
+
+<a class="kaart" href="wetboek/verkeer.html">
+
+<i class="fa-solid fa-car"></i>
+
+<h3>Wegenverkeerswet</h3>
+
+<p>
+Verkeersregels, overtredingen en sancties.
+</p>
+
 </a>
 
-<a href="wetboek/wapens.html">
-    <strong>🔫 Wet Wapens en Munitie</strong>
+
+
+
+
+
+<a class="kaart" href="wetboek/wapens.html">
+
+<i class="fa-solid fa-gun"></i>
+
+<h3>Wet Wapens en Munitie</h3>
+
+<p>
+Regels rondom wapens en verboden voorwerpen.
+</p>
+
 </a>
 
-<a href="wetboek/drugs.html">
-    <strong>💊 Opiumwet</strong>
+
+
+
+
+
+
+<a class="kaart" href="wetboek/drugs.html">
+
+<i class="fa-solid fa-capsules"></i>
+
+<h3>Opiumwet</h3>
+
+<p>
+Regels over bezit, handel en productie.
+</p>
+
 </a>
+
+
+
 
 </div>
 
 
+
+
+
+
+<footer>
+
+© 2026 Multiverse Roleplay • Digitaal Wetboek
+
+</footer>
+
+
+
+
+
+<script>
+
+function zoeken(){
+
+let input = document
+.getElementById("zoek")
+.value
+.toLowerCase();
+
+
+let kaarten = document.querySelectorAll(".kaart");
+
+
+kaarten.forEach(function(kaart){
+
+let tekst = kaart.innerText.toLowerCase();
+
+
+kaart.style.display =
+tekst.includes(input)
+? "block"
+: "none";
+
+
+});
+
+}
+
+</script>
+
+
+
 </body>
+
 </html>
+```
