@@ -1,51 +1,133 @@
 body {
     font-family: "Segoe UI", sans-serif;
-    background: #f5f5f5;
+    background: #f4f6f8;
     margin: 0;
     padding: 0;
     color: #222;
 }
 
 header {
-    background: #1a1a1a;
+    background: #171717;
     color: white;
-    padding: 20px;
+    padding: 24px 32px;
+}
+
+.site-logo {
+    width: 85px;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 30px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin: 18px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 16px;
 }
 
 nav a {
-    color: #ddd;
+    color: #eeeeee;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 nav a:hover {
-    color: #fff;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 main {
-    padding: 30px;
+    padding: 32px;
     background: white;
-    margin: 20px;
+    margin: 24px auto;
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+main h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.banner {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+    margin-top: 24px;
     border-radius: 8px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #1a1a1a;
+    padding: 24px;
+    background: #171717;
     color: white;
     margin-top: 40px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+#scrollTop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    background: #171717;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#scrollTop:hover {
+    background: #333333;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        margin: 16px;
+        padding: 22px;
+    }
+
+    .site-logo {
+        width: 70px;
+    }
+
+    .banner {
+        max-height: 220px;
+    }
+
+    .footer-logo {
+        width: 55px;
+    }
 }
