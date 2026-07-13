@@ -1,83 +1,247 @@
-/* ===========================
-   Multiverse Wetboek
-=========================== */
-
-*{
+{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* Algemene instellingen */
+
 body{
-    background:#eef2f7;
-    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    background:#f3f5f8;
     color:#222;
     line-height:1.6;
 }
 
-.container{
-    width:90%;
-    max-width:1450px;
-    margin:40px auto;
+/* Header */
+
+header{
+    background:#1d1f24;
+    color:#fff;
+    padding:25px 50px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
-/* ===========================
-   HEADER
-=========================== */
+.site-logo{
+    width:85px;
+    display:block;
+    margin:0 auto 15px;
+}
 
-.page-header{
-    background:#0b3d91;
+header h1{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+/* Navigatie */
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+    gap:15px;
+}
+
+nav li{
+    list-style:none;
+}
+
+nav a{
+    display:block;
     color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    transition:.25s;
+    font-weight:600;
+}
+
+nav a:hover{
+    background:#0b63ce;
+}
+
+/* Hoofdinhoud */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
     border-radius:12px;
-    padding:30px;
-    margin-bottom:35px;
+    padding:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+main h2{
+    color:#0b3d91;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+main p{
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+/* Banner */
+
+.banner{
+    width:100%;
+    border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-.page-header h1{
-    font-size:38px;
+/* Footer */
+
+footer{
+    background:#1d1f24;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:60px;
+}
+
+.footer-logo{
+    width:65px;
+    margin-bottom:15px;
+}
+
+footer p{
+    opacity:.8;
+}
+
+/* Scroll knop */
+
+#scrollTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#0b63ce;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    transition:.25s;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#scrollTop:hover{
+    transform:translateY(-3px);
+    background:#094ea3;
+}
+
+/* Algemene lijsten */
+
+.wetslijst{
+    margin-top:15px;
+    padding-left:25px;
+}
+
+.wetslijst li{
     margin-bottom:10px;
 }
 
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+    padding:20px;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+nav a{
+    width:240px;
+    text-align:center;
+}
+
+main{
+    width:95%;
+    padding:25px;
+}
+
+.site-logo{
+    width:70px;
+}
+
+.footer-logo{
+    width:55px;
+}
+
+} 
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+/* Header */
+
+.page-header{
+    background:linear-gradient(135deg,#0b3d91,#0f5fc4);
+    color:white;
+    padding:35px;
+    border-radius:14px;
+    margin-bottom:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.page-header h1{
+    margin:0;
+    font-size:38px;
+}
+
 .page-header p{
+    margin-top:10px;
     font-size:18px;
     opacity:.95;
 }
 
-/* ===========================
-   SEARCH
-=========================== */
+/* Zoekbalk */
 
 .search-box{
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .search-box input{
     width:100%;
-    padding:16px;
+    padding:16px 20px;
     font-size:17px;
-    border:none;
-    border-radius:10px;
+    border:2px solid #d9e0ea;
+    border-radius:12px;
     background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.25s;
+    transition:.2s;
 }
 
 .search-box input:focus{
     outline:none;
-    box-shadow:0 0 0 3px #0b63ce;
+    border-color:#0b63ce;
+    box-shadow:0 0 0 4px rgba(11,99,206,.15);
 }
 
-/* ===========================
-   INTRO
-=========================== */
+/* Intro */
 
 .introduction{
     background:white;
-    border-radius:12px;
-    padding:25px;
-    margin-bottom:40px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:14px;
+    padding:30px;
+    margin-bottom:35px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 .introduction h2{
@@ -86,157 +250,155 @@ body{
 }
 
 .introduction p{
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-/* ===========================
-   ARTIKELEN
-=========================== */
+/* Artikelen */
 
 .article{
     background:white;
-    border-radius:12px;
-    padding:28px;
+    border-radius:14px;
+    padding:30px;
     margin-bottom:35px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.25s;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    border-left:6px solid #0b63ce;
+    transition:.2s;
 }
 
 .article:hover{
     transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
 }
 
 .article h2{
     color:#0b3d91;
-    margin-bottom:18px;
+    margin-bottom:20px;
     font-size:30px;
 }
-
-/* ===========================
-   INFO BALK
-=========================== */
-
-.article-info{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.article-info span{
-    background:#0b63ce;
-    color:white;
-    padding:8px 16px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-}
-
-/* ===========================
-   PARAGRAFEN
-=========================== */
 
 .article p{
     margin-bottom:18px;
     font-size:17px;
 }
 
-/* ===========================
-   TABEL
-=========================== */
+/* Info labels */
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
-    overflow:hidden;
-    border-radius:10px;
+.article-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
 }
 
-thead{
+.article-info span{
+    background:#0b63ce;
+    color:white;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* Tabellen */
+
+.article table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.article thead{
     background:#0b3d91;
     color:white;
 }
 
-thead th{
+.article thead th{
     padding:16px;
     font-size:16px;
-}
-
-tbody tr:nth-child(even){
-    background:#f5f7fa;
-}
-
-tbody tr:hover{
-    background:#dcecff;
-}
-
-tbody td{
-    padding:15px;
-    border-bottom:1px solid #ddd;
     text-align:center;
 }
 
-/* Eerste kolom links */
+.article tbody td{
+    padding:16px;
+    border-bottom:1px solid #e7e7e7;
+    text-align:center;
+}
 
-tbody td:first-child{
+.article tbody td:first-child{
     text-align:left;
     font-weight:600;
 }
 
-/* ===========================
-   BOETE
-=========================== */
-
-tbody td:last-child{
-    color:#d22;
-    font-weight:bold;
+.article tbody tr:nth-child(even){
+    background:#f7f9fc;
 }
 
-/* ===========================
-   CELSTRAF
-=========================== */
+.article tbody tr:hover{
+    background:#eaf3ff;
+}
 
-tbody td:nth-child(2){
+/* Kleuren straf */
+
+.article tbody td:nth-child(2){
     color:#0b63ce;
-    font-weight:bold;
+    font-weight:700;
 }
 
-/* ===========================
-   TAAKSTRAF
-=========================== */
-
-tbody td:nth-child(3){
-    color:#157347;
-    font-weight:bold;
+.article tbody td:nth-child(3){
+    color:#198754;
+    font-weight:700;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+.article tbody td:nth-child(4){
+    color:#c62828;
+    font-weight:700;
+}
+
+/* Kleine tekst */
+
+small{
+    color:#666;
+}
+
+/* Responsive */
 
 @media(max-width:900px){
 
+.container{
+    width:95%;
+}
+
+.page-header{
+    padding:25px;
+}
+
+.page-header h1{
+    font-size:28px;
+}
+
 .article{
-    padding:20px;
+    padding:22px;
 }
 
 .article h2{
     font-size:24px;
 }
 
-table{
+.article table{
+    display:block;
+    overflow-x:auto;
+}
+
+.article th,
+.article td{
+    padding:12px;
     font-size:14px;
 }
 
-thead th,
-tbody td{
-    padding:10px;
-}
-
-.page-header h1{
-    font-size:30px;
+.search-box input{
+    font-size:15px;
 }
 
 }
