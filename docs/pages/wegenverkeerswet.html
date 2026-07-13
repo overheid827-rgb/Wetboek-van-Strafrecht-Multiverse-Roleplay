@@ -50,11 +50,17 @@ Hoofdstuk III - Verkeersovertredingen en verkeersmisdrijven
 
 <div class="search-box">
 
-<input 
-type="text" 
-id="searchInput" 
-placeholder="Zoek artikel of overtreding..."
->
+    <div class="search-wrapper">
+
+        <span class="search-icon">🔎</span>
+
+        <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Zoek artikel of overtreding..."
+        >
+
+    </div>
 
 </div>
 
@@ -1718,3 +1724,70 @@ aan een verkeersovertreding.
 </table>
 
 </section>
+
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const artikelen = document.querySelectorAll(".article");
+
+searchInput.addEventListener("input", function () {
+
+    const zoekterm = this.value.toLowerCase().trim();
+
+    let gevonden = false;
+
+    artikelen.forEach(function(artikel) {
+
+        const tekst = artikel.innerText.toLowerCase();
+
+        if (tekst.includes(zoekterm)) {
+
+            artikel.style.display = "";
+
+            gevonden = true;
+
+        } else {
+
+            artikel.style.display = "none";
+
+        }
+
+    });
+
+
+    let melding = document.getElementById("geenResultaat");
+
+
+    if (!gevonden && zoekterm !== "") {
+
+        if (!melding) {
+
+            melding = document.createElement("p");
+
+            melding.id = "geenResultaat";
+
+            melding.innerHTML = "❌ Geen artikelen gevonden.";
+
+            document.querySelector(".container")
+            .appendChild(melding);
+
+        }
+
+    } else {
+
+        if (melding) {
+
+            melding.remove();
+
+        }
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
